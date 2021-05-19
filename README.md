@@ -2,6 +2,9 @@
 
 I used chrome for this--I assume some change are needed if you use a different browser. 
 
+
+## To Setup
+
 * Have python3
 
 * Install selenium and time and json
@@ -22,7 +25,6 @@ https://sites.google.com/a/chromium.org/chromedriver/downloads
 ```
 echo $PATH
 /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-
 ```
 
 * Unpack the driver, move it to any of the folders paths listed above.
