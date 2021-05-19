@@ -28,8 +28,9 @@ echo $PATH
 
 * Try to execute the file via cmd to confirm
 
-** On Mac, I had a permissions issue. Go to Settings=>Security=>General=>Allow chromedriver
-** Then retry the command, it should work
+* * On Mac, I had a permissions issue. Go to Settings=>Security=>General=>Allow chromedriver
+
+* * Then retry the command, it should work
 
 * Clone the repo
 * go to the folder
