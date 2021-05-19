@@ -14,6 +14,7 @@ I used chrome for this--I assume some change are needed if you use a different b
 https://www.selenium.dev/documentation/en/webdriver/driver_requirements/
 
 * Download the google chrome driver, of the appropriate version you are running:
+
 https://sites.google.com/a/chromium.org/chromedriver/downloads
 
 * Go to terminal, echo your path, get some paths like this (separated by colon)
@@ -24,16 +25,18 @@ echo $PATH
 
 ```
 
-* Unpack it, move it to any of the paths there.
+* Unpack the driver, move it to any of the folders paths listed above.
 
-* Try to execute the file via cmd to confirm
+* Try to execute the file via cmd to confirm: `./chromedriver` 
+	* On Mac, I had a permissions issue. Go to Settings=>Security=>General=>Allow chromedriver
+	* Then retry the command, it should work
 
-* * On Mac, I had a permissions issue. Go to Settings=>Security=>General=>Allow chromedriver
 
-* * Then retry the command, it should work
 
 * Clone the repo
-* go to the folder
-* replace the dummy info with yours
-* execute `python3 vaccine.py`
-* and get yo ass vaccinated!
+* Go to the folder
+* Replace the dummy info with yours, make sure to select the right vaccination place
+* Execute `python3 vaccine.py`
+* Get yo ass vaccinated!
+
+I want to thank stackoverflow, my incredible google abilities, and shameless lack of python knowledge to complete this feat of ingenuity.
