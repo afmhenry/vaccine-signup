@@ -12,7 +12,7 @@ wait_time = .5
 
 print("Starting now: "+str(datetime.now()))
 
-with open('/Users/manebjaelke/Documents/vaccine-signup/my-data.json') as json_file:
+with open('/Users/manebjaelke/Documents/vaccine-signup/data.json') as json_file:
     answer_dict = json.load(json_file,object_pairs_hook=OrderedDict)
 
     with Chrome() as driver:
