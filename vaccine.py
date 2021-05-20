@@ -1,70 +1,58 @@
+#!/usr/bin/env python3
 import time
+from datetime import datetime
 import json
 from selenium.webdriver import Chrome
 from selenium.webdriver.common.keys import Keys
+from collections import OrderedDict
 
 #radio selection of vaccine site, number 1-9 as string
 area = "6"
+wait_time = .5
 
-#personal info
-answers = '[\
-  { \
-    "type": "t50100775",\
-    "value": "Test Name"\
-  },\
-  {\
-    "type": "n35965768",\
-    "value": "AGE"\
-  },\
-  {\
-    "type": "t50088645",\
-    "value": "ADDRESS"\
-  },\
-  {\
-    "type": "t50088674",\
-    "value": "CITY"\
-  },\
-  {\
-    "type": "n50088775",\
-    "value": "PHONENUM"\
-  }\
-]'
+print("Starting now: "+str(datetime.now()))
 
-answer_dict = json.loads(answers)
+with open('/Users/manebjaelke/Documents/vaccine-signup/data.json') as json_file:
+    answer_dict = json.load(json_file,object_pairs_hook=OrderedDict)
 
-with Chrome() as driver:
-    #url for the form
-    driver.get("https://www.survey-xact.dk/LinkCollector?key=JPH8ZGHNL21N")
+    with Chrome() as driver:
+        #url for the form
+        driver.get("https://www.survey-xact.dk/LinkCollector?key=JPH8ZGHNL21N")
 
-    #hacky time delays to avoid async messiness. 
-    time.sleep(1)
-    firstNext = driver.find_element_by_class_name("next-area")
-    firstNext.click()
-    time.sleep(1)
-
-    #iterate over the first pages and put in values.
-    for entry in answer_dict:
-        input_field = driver.find_element_by_name(entry['type'])
-        next_button = driver.find_element_by_class_name("next-area")
-        input_field.send_keys(entry['value'])
-        time.sleep(.5)
-        next_button.click()
+        #hacky time delays to avoid async messiness. 
         time.sleep(1)
+        firstNext = driver.find_element_by_class_name("next-area")
+        firstNext.click()
+        time.sleep(wait_time)
 
-    #radio needs weird stuff, so had to do seperate. 
-    input_field = driver.find_element_by_css_selector("input[type='radio'][data-choice-label-value='"+area+"']")
-    input_field.find_element_by_xpath('..').click()
-    next_button = driver.find_element_by_class_name("next-area")
-    next_button.click()
-    time.sleep(1)
+        #iterate over the first pages and put in values.
+        for entry in answer_dict:
+            input_field = driver.find_element_by_name(entry['type'])
+            next_button = driver.find_element_by_class_name("next-area")
 
-    #data acceptance confirmation page
-    next_button = driver.find_element_by_class_name("next-area")
-    next_button.click()
-    time.sleep(1)
+            time.sleep(wait_time)
+            input_field.send_keys(entry['value'])
+            time.sleep(wait_time)
+            next_button.click()
+            time.sleep(wait_time)
 
-    #submission page
-    #Commented so you don't submit without testing first
-    #next_button = driver.find_element_by_class_name("next-area")
-    #next_button.click()
-    time.sleep(2)
+        #radio needs weird stuff, so had to do seperate. 
+        input_field = driver.find_element_by_css_selector("input[type='radio'][data-choice-label-value='"+area+"']")
+        input_field.find_element_by_xpath('..').click()
+        next_button = driver.find_element_by_class_name("next-area")
+        next_button.click()
+        time.sleep(wait_time)
+
+        #data acceptance confirmation page
+        next_button = driver.find_element_by_class_name("next-area")
+        next_button.click()
+        time.sleep(wait_time)
+
+        #submission page
+        #Commented so you don't submit without testing first
+        #next_button = driver.find_element_by_class_name("next-area")
+        #next_button.click()
+        time.sleep(10)
+print("Ending now: "+str(datetime.now())+"\n")
+
+

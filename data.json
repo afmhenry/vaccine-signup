@@ -1,0 +1,22 @@
+[
+  {
+    "type": "t50100775",
+    "value": "Test Name"
+  },
+  {
+    "type": "n35965768",
+    "value": "AGE"
+  },
+  {
+    "type": "t50088645",
+    "value": "ADDRESS"
+  },
+  {
+    "type": "t50088674",
+    "value": "CITY"
+  },
+  {
+    "type": "n50088775",
+    "value": "PHONENUM"
+  }
+]
