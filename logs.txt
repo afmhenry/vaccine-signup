@@ -1,0 +1,17 @@
+Starting now: 2021-05-21 07:20:01.478440
+Ending now: 2021-05-21 07:20:31.611087
+
+Starting now: 2021-05-22 07:20:02.720641
+Region Hovedstaden
+Ending now: 2021-05-22 07:20:32.703169
+
+Starting now: 2021-05-23 00:04:01.987812
+True if completed:
+True
+Ending now: 2021-05-23 00:04:39.037197
+
+Starting now: 2021-05-24 00:04:02.563177
+True if completed:
+True
+Ending now: 2021-05-24 00:04:23.860425
+
