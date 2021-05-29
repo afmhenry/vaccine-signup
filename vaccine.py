@@ -45,7 +45,9 @@ with open('/Users/manebjaelke/Documents/vaccine-signup/data.json') as json_file:
         #Commented so you don't submit without testing first
         next_button = driver.find_element_by_class_name("next-area")
         next_button.click()
-        print("True if completed:" + driver.title == "Region Hovedstaden")
+        time.sleep(1)
+        result_page = driver.title == "Region Hovedstaden"
+        print("True if completed: ", result_page)
 
 print("Ending now: "+str(datetime.now())+"\n")
 
