@@ -40,12 +40,12 @@ echo $PATH
 * Get yo ass vaccinated!
 
 ## Or make it cool
-* Set up a cronjob for this. I've tested this on mac and may need some adjustments.
-* Replace the paths to match your machine in the example config file
-* Run `crontab -e`
-* Paste in the edited config file. It is planned to run at 9am, you can change using this site https://crontab.guru to figure out syntax
-* I can suggest testing with a minute schedule, (not submitting mode,), you can check results in log.txt. You should see a start and end time. 
-* You will probably find that it doesnt work, with some permission issue. You have to give cron access to the filesystem. Do at your own risk: https://blog.bejarano.io/fixing-cron-jobs-in-mojave/
+* Set up a cronjob for this. I've been running it for a while without issue on a mac, on ubuntu should be trivial. Unsure about windows. 
+* Replace the paths in the config file to match your machine in the example config file
+* Run `crontab -e` in terminal
+* Paste in the edited config file. It is planned to run at 9am, you can change using this site https://crontab.guru to guide on syntax
+* I can suggest testing with a minute schedule, (not submitting mode,), you can check results in log.txt. You should see a start and end time.
+* You will probably find that it doesnt work, with the log containing permission issue. You have to give cron access to the filesystem. Do at your own risk: https://blog.bejarano.io/fixing-cron-jobs-in-mojave/
 * Then it should work :) Any other debugging can probably be helped by this: https://askubuntu.com/questions/23009/why-crontab-scripts-are-not-working
 
 
