@@ -34,7 +34,8 @@ echo $PATH
 
 * Clone the repo
 * Go to the folder
-* Replace the dummy info in data.json with yours, make sure to select the right vaccination place, which is saved as a variable in the code for reasons. Make sure to update the path of the file in your code, to match your machine.
+* Replace the dummy info in data.json with yours, make sure to select the right vaccination place, which is saved as a variable in the code for reasons.
+* Update the path of the file in your code, to match your machine. [vaccination places](https://github.com/afmhenry/vaccine-signup/blob/main/VACCINE_PLACES.png), ordered 1-9
 * Make it executable(shell script) `chmod u+x vaccine.py` or just execute as normal python file. 
 * Execute `./vaccine.py`
 * Get yo ass vaccinated!

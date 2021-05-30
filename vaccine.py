@@ -11,7 +11,7 @@ area = "6"
 
 print("Starting now: "+str(datetime.now()))
 
-with open('/Users/manebjaelke/Documents/vaccine-signup/data.json') as json_file:
+with open('/Users/manebjaelke/Documents/vaccine-signup/my-data.json') as json_file:
     answer_dict = json.load(json_file,object_pairs_hook=OrderedDict)
 
     with Chrome() as driver:
@@ -42,10 +42,9 @@ with open('/Users/manebjaelke/Documents/vaccine-signup/data.json') as json_file:
         next_button.click()
 
         #submission page
-        #Commented so you don't submit without testing first
         next_button = driver.find_element_by_class_name("next-area")
         next_button.click()
-        time.sleep(1)
+        time.sleep(.5)
         result_page = driver.title == "Region Hovedstaden"
         print("True if completed: ", result_page)
 
