@@ -2,6 +2,7 @@
 import time
 from datetime import datetime
 import json
+import sys
 from selenium.webdriver import Chrome
 from selenium.webdriver.common.keys import Keys
 from collections import OrderedDict
@@ -11,7 +12,8 @@ area = "6"
 
 print("Starting now: "+str(datetime.now()))
 
-with open('/Users/manebjaelke/Documents/vaccine-signup/data.json') as json_file:
+#read file from input cmd
+with open(sys.argv[1]) as json_file:
     answer_dict = json.load(json_file,object_pairs_hook=OrderedDict)
 
     with Chrome() as driver:
