@@ -21,7 +21,7 @@ with open(sys.argv[1]) as json_file:
         driver.get("https://www.survey-xact.dk/LinkCollector?key=JPH8ZGHNL21N")
 
         #Less hacky implicit wait so no hardcoded wait time needed. 
-        driver.implicitly_wait(10)
+        driver.implicitly_wait(15)
 
         firstNext = driver.find_element_by_class_name("next-area")
         firstNext.click()
@@ -44,11 +44,12 @@ with open(sys.argv[1]) as json_file:
         next_button.click()
 
         #submission page
-        next_button = driver.find_element_by_class_name("next-area")
-        next_button.click()
-        time.sleep(.5)
-        result_page = driver.title == "Region Hovedstaden"
-        print("True if completed: ", result_page)
+        if(True):#change this to False for TEST mode. it won't submit then.
+            next_button = driver.find_element_by_class_name("next-area")
+            next_button.click()
+            time.sleep(.5)
+            result_page = driver.title == "Region Hovedstaden"
+            print("True if completed: ", result_page)
 
 print("Ending now: "+str(datetime.now())+"\n")
 

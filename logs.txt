@@ -1,0 +1,30 @@
+Starting now: 2021-06-04 08:07:23.331558
+True if completed:  True
+Ending now: 2021-06-04 08:07:34.741897
+
+Starting now: 2021-06-05 00:04:02.248470
+True if completed:  True
+Ending now: 2021-06-05 00:04:11.137881
+
+Starting now: 2021-06-06 00:04:02.422219
+True if completed:  True
+Ending now: 2021-06-06 00:04:12.571783
+
+Starting now: 2021-06-07 00:04:01.958867
+True if completed:  True
+Ending now: 2021-06-07 00:04:11.694753
+Starting now: 2021-06-08 00:04:02.698787
+True if completed:  True
+Ending now: 2021-06-08 00:04:11.728190
+
+Starting now: 2021-06-09 00:04:02.219726
+True if completed:  True
+Ending now: 2021-06-09 00:04:11.442682
+
+Starting now: 2021-06-10 00:04:02.035176
+True if completed:  True
+Ending now: 2021-06-10 00:04:11.743930
+
+Starting now: 2021-06-17 20:47:54.732386
+Ending now: 2021-06-17 20:48:07.107097
+
